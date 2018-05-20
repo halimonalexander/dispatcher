@@ -26,7 +26,7 @@ class Dispatcher implements IDispatcher
             $listeners = $this->getListeners($eventName);
 
             foreach ($listeners as $listener) {
-                call_user_func($listener, $event, $eventName, $this);
+                call_user_func($listener, $event, $eventName);
             }
         }
     }
