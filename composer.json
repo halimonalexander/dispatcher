@@ -1,0 +1,26 @@
+{
+  "name": "halimonalexander/dispatcher",
+  "description": "Dispatcher library",
+  "license": "BSD-3-Clause",
+  "homepage": "https://github.com/halimonalexander/dispatcher",
+  "support": {
+    "issues": "https://github.com/halimonalexander/dispatcher/issues"
+  },
+  "authors": [
+    {
+      "name": "Halimon Alexander",
+      "email": "vvthanatos@gmail.com",
+      "role": "lead"
+    }
+  ],
+  "require": {
+    "php": "^7.0"
+  },
+  "require-dev": {
+  },
+  "autoload": {
+    "psr-4": {
+      "HalimonAlexander\\Dispatcher\\": "src/"
+    }
+  }
+}
