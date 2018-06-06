@@ -33,6 +33,10 @@ class Dispatcher implements IDispatcher
 
     public function getListeners(string $eventName): array
     {
+        if (!array_key_exists($eventName, $this->listeners)) {
+            return [];
+        }
+
         return $this->listeners[$eventName];
     }
 
