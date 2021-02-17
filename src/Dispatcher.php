@@ -13,26 +13,38 @@ declare(strict_types=1);
 
 namespace HalimonAlexander\Dispatcher;
 
-class Dispatcher implements IDispatcher
+class Dispatcher implements DispatcherInterface
 {
-    private $listeners = array();
+    /**
+     * @var callable[][]
+     */
+    private array $listeners = [];
 
-    public function addListener(string $eventName, callable $listener)
+    /**
+     * @inheritdoc
+     */
+    public function addListener(string $eventName, callable $listener): void
     {
         $this->listeners[$eventName][] = $listener;
     }
 
-    public function dispatch(string $eventName, Event $event)
+    /**
+     * @inheritdoc
+     */
+    public function dispatch(string $eventName, Event $event): void
     {
         if ($this->hasListeners($eventName)) {
             $listeners = $this->getListeners($eventName);
 
             foreach ($listeners as $listener) {
-                call_user_func($listener, $event, $eventName);
+                $listener($event, $eventName);
             }
         }
     }
 
+    /**
+     * @inheritdoc
+     */
     public function getListeners(string $eventName): array
     {
         if (!array_key_exists($eventName, $this->listeners)) {
@@ -42,6 +54,9 @@ class Dispatcher implements IDispatcher
         return $this->listeners[$eventName];
     }
 
+    /**
+     * @inheritdoc
+     */
     public function hasListeners(string $eventName): bool
     {
         return !empty($this->getListeners($eventName));

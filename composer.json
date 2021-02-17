@@ -2,6 +2,7 @@
   "name": "halimonalexander/dispatcher",
   "description": "Dispatcher library",
   "type": "library",
+  "keywords": ["dispatcher", "events", "listener"],
   "license": "BSD-3-Clause",
   "homepage": "https://github.com/halimonalexander/dispatcher",
   "require": {

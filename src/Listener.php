@@ -15,7 +15,5 @@ namespace HalimonAlexander\Dispatcher;
 
 abstract class Listener
 {
-    abstract function __construct();
-
-    abstract function __invoke(Event $event, string $eventName);
+    abstract public function __invoke(Event $event): void;
 }
