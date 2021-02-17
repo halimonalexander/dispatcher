@@ -1,12 +1,16 @@
 # Dispatcher
+
 Events dispatcher Library
+
+![main branch parameter](https://github.com/halimonalexander/dispatcher/workflows/php/badge.svg)
+
 
 ## Install
 ```bash
 $ composer require halimonalexander/dispatcher
 ```
 
-## Example
+## Example of usage
 
 ```php
 use HalimonAlexander\Dispatcher\Dispatcher;
