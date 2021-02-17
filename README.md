@@ -1,6 +1,11 @@
 # Dispatcher
 Events dispatcher Library
 
+## Install
+```bash
+$ composer require halimonalexander/dispatcher
+```
+
 ## Example
 
 ```php
