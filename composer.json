@@ -17,8 +17,13 @@
   },
   "autoload": {
     "psr-4": {
-      "HalimonAlexander\\Dispatcher\\": "src/"
+      "HalimonAlexander\\Dispatcher\\": "src/",
       "HalimonAlexander\\Tests\\Dispatcher\\": "tests/"
+    }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.x.x-dev"
     }
   }
 }
